@@ -29,7 +29,7 @@ initial begin
 
   repeat(100) begin
     trans = new();
-    assert(trans.randomize());
+    assert(trans.randomize());// 
     driver.drive(trans);
     if (!trans.read_write) 
       $display("Read data: %h from address: %h", trans.data, trans.address);
@@ -41,7 +41,7 @@ Abstraction:
 The class Memory_Transaction abstrcats away the details of the memory interface.
 Test writer thinks in terms of high-levl operations
 
-Reusability of the same transaction class: --- Stimuli , driver of the DUT, check responses
+UVM - Reusability of the same transaction class: --- Stimuli , driver of the DUT, check responses
 
 Randomization
 */
